@@ -169,7 +169,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     view.map.allLayers.find(function(layer) {
             return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
-    document.getElementById("detailtext").textContent="The landslide-induced risk reports the possible economic consequences to human settlements and agricultural areas across the European landscape. The expected economic losses are computed by combining the susceptibility, the vulnerability, and exposure of exposed elements The vulnerability is set equal to 1 (maximum degree of loss), in the occurrence of a landslide, any structure and element in its path will suffer irreparable damage. Expected losses (€/square meter) are displayed on a logarithmic scale. ";
+    document.getElementById("detailtext").textContent="The landslide-induced risk reports the possible economic consequences to human settlements and agricultural areas across the European landscape. The expected economic losses are computed by combining the susceptibility, the vulnerability, and exposure of exposed elements. The vulnerability is set equal to 1 (maximum degree of loss), in the occurrence of a landslide, any structure and element in its path will suffer irreparable damage. Expected losses (€/square meter) are displayed on a logarithmic scale. ";
   };
 
   function loadrisk(){
@@ -191,7 +191,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     view.map.allLayers.find(function(layer) {
             return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
-    document.getElementById("detailtext").textContent=" Risk - Hotsposts. The map shows the spatial distribution of landslide susceptibility (red colors) and human settlement exposure (blue colors) by means of a bivariate color scheme. This visualization aims to compare and emphasize quantitatively the relationship between these two components.";
+    document.getElementById("detailtext").textContent=" Risk - Hotspots. The map shows the spatial distribution of landslide susceptibility (red colors) and human settlement exposure (blue colors) by means of a bivariate color scheme. This visualization aims to compare and emphasize quantitatively the relationship between these two components.";
   };
   function loadriskday(){
     view.map.allLayers.find(function(layer) {
@@ -212,7 +212,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     view.map.allLayers.find(function(layer) {
             return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
-    document.getElementById("detailtext").textContent="Yearly population at risk during daytime. The map shows the spatial distribution of landslide susceptibility and yearly population density during daytime through a bivariate scheme.";
+    document.getElementById("detailtext").textContent="Yearly population at risk during daytime. The map shows the spatial distribution of landslide susceptibility and yearly population density during daytime through a bivariate scheme. Slope units without inhabitants are not displayed.";
   };
   function loadrisknight(){
     view.map.allLayers.find(function(layer) {
@@ -233,7 +233,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     view.map.allLayers.find(function(layer) {
             return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
-    document.getElementById("detailtext").textContent=" Yearly population at risk during nighttime. The map shows the spatial distribution of landslide susceptibility and yearly population density during nighttime through a bivariate scheme.";
+    document.getElementById("detailtext").textContent=" Yearly population at risk during nighttime. The map shows the spatial distribution of landslide susceptibility and yearly population density during nighttime through a bivariate scheme. Slope units without inhabitants are not displayed.";
   };
   function loadriskdifference(){
     view.map.allLayers.find(function(layer) {
