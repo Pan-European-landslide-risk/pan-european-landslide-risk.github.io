@@ -56,7 +56,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     const risklayerday = new FeatureLayer({
       url: "https://services6.arcgis.com/rbb2iNgQKjXE64T8/arcgis/rest/services/Yearly_population_at_risk_Daytime/FeatureServer",
       visible: false,
-      title:"RiskDay"
+      title:"RiskDay (Susceptibility vs Yearly Population Daytime)"
     });
   
     view.map.add(risklayerday);
@@ -64,7 +64,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     const risklayernight = new FeatureLayer({
       url: "https://services6.arcgis.com/rbb2iNgQKjXE64T8/arcgis/rest/services/Yearly_population_at_risk_Nighttime/FeatureServer",
       visible: false,
-      title:"RiskNight"
+      title:"RiskNight (Susceptibility vs Yearly Population Nighttime)"
     });
   
     view.map.add(risklayernight);
@@ -72,7 +72,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     const risklayerdiff = new FeatureLayer({
       url: "https://services6.arcgis.com/rbb2iNgQKjXE64T8/arcgis/rest/services/Yearly_population_at_risk_differences/FeatureServer",
       visible: false,
-      title:"RiskDiff"
+      title:"RiskDiff (Susceptibility vs Differences in Yearly Population)"
     });
   
     view.map.add(risklayerdiff);
@@ -139,15 +139,15 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
       return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
-        return layer.title === "RiskDay";
+        return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-          return layer.title === "RiskNight";
+          return layer.title === "RiskNight (Susceptibility vs Yearly Population Nighttime)";
           }).visible=false;
     view.map.allLayers.find(function(layer) {
-            return layer.title === "RiskDiff";
+            return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
-    document.getElementById("detailtext").textContent="The hazard component was considered as the only spatial probability of occurrence of landslides, commonly named Susceptibility. The susceptibility map shows the likelihood of a landslide occurrence for each Slope Unit (SU) pertaining to the European mountain ranges through a scale ranging from 0 (no landslide) to 1 (unstable SU).";
+    document.getElementById("detailtext").textContent="The hazard component is considered as the only spatial probability of occurrence of landslides (Susceptibility). The susceptibility map shows the probability of landsliding for each mapping unit (Slope Unit). The scores range from 0 (non-susceptible conditions) to 1 (prone to failure).";
   };
 
   function loadloss(){
@@ -161,15 +161,15 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
       return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
-        return layer.title === "RiskDay";
+        return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-          return layer.title === "RiskNight";
+          return layer.title === "RiskNight (Susceptibility vs Yearly Population Nighttime)";
           }).visible=false;
     view.map.allLayers.find(function(layer) {
-            return layer.title === "RiskDiff";
+            return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
-    document.getElementById("detailtext").textContent="The landslide-induced risk reports the possible economic consequences to human settlements and agricultural areas across the European landscape The expected economic losses were computed by combining the spatial probability of landslide occurrence, the vulnerability, and exposure of exposed elements The vulnerability was set equal to 1 (maximum degree of loss), in the occurrence of a landslide, any structure and element in its path will suffer irreparable damage. The expected losses are expressed as a function of Slope Units extension and reported as euros per square meter. ";
+    document.getElementById("detailtext").textContent="The landslide-induced risk reports the possible economic consequences to human settlements and agricultural areas across the European landscape. The expected economic losses are computed by combining the susceptibility, the vulnerability, and exposure of exposed elements The vulnerability is set equal to 1 (maximum degree of loss), in the occurrence of a landslide, any structure and element in its path will suffer irreparable damage. Expected losses (€/square meter) are displayed on a logarithmic scale. ";
   };
 
   function loadrisk(){
@@ -183,15 +183,15 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
       return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=true;
     view.map.allLayers.find(function(layer) {
-        return layer.title === "RiskDay";
+        return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-          return layer.title === "RiskNight";
+          return layer.title === "RiskNight (Susceptibility vs Yearly Population Nighttime)";
           }).visible=false;
     view.map.allLayers.find(function(layer) {
-            return layer.title === "RiskDiff";
+            return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
-    document.getElementById("detailtext").textContent="The Hotspots of landslide risk across the European mountain ranges are expressed through a quantitative bivariate map. This map visually elucidates the intricate spatial interplay between two fundamental constituents of the risk assessment equation: the Hazard component, which encapsulates Susceptibility, and the Exposure component.";
+    document.getElementById("detailtext").textContent=" Risk - Hotsposts. The map shows the spatial distribution of landslide susceptibility (red colors) and human settlement exposure (blue colors) by means of a bivariate color scheme. This visualization aims to compare and emphasize quantitatively the relationship between these two components.";
   };
   function loadriskday(){
     view.map.allLayers.find(function(layer) {
@@ -204,13 +204,13 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
       return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
-        return layer.title === "RiskDay";
+        return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
         }).visible=true;
     view.map.allLayers.find(function(layer) {
-          return layer.title === "RiskNight";
+          return layer.title === "RiskNight (Susceptibility vs Yearly Population Nighttime)";
           }).visible=false;
     view.map.allLayers.find(function(layer) {
-            return layer.title === "RiskDiff";
+            return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
     document.getElementById("detailtext").textContent="Yearly population at risk during daytime. The map shows the spatial distribution of landslide susceptibility and yearly population density during daytime through a bivariate scheme.";
   };
@@ -225,13 +225,13 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
       return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
-        return layer.title === "RiskDay";
+        return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-          return layer.title === "RiskNight";
+          return layer.title === "RiskNight (Susceptibility vs Yearly Population Nighttime)";
           }).visible=true;
     view.map.allLayers.find(function(layer) {
-            return layer.title === "RiskDiff";
+            return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=false;
     document.getElementById("detailtext").textContent=" Yearly population at risk during nighttime. The map shows the spatial distribution of landslide susceptibility and yearly population density during nighttime through a bivariate scheme.";
   };
@@ -246,13 +246,13 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
       return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
-        return layer.title === "RiskDay";
+        return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-          return layer.title === "RiskNight";
+          return layer.title === "RiskNight (Susceptibility vs Yearly Population Nighttime)";
           }).visible=false;
     view.map.allLayers.find(function(layer) {
-            return layer.title === "RiskDiff";
+            return layer.title === "RiskDiff (Susceptibility vs Differences in Yearly Population)";
             }).visible=true;
     document.getElementById("detailtext").textContent=" The map shows the spatial distribution between landslide susceptibility and differences during daytime and nighttime in the yearly population. Red colors indicate mapping units where the population of nighttime is greater than the one of daytime. The green colors display the opposite case. Colors from grey to white are related to mapping units where there is no differences between the two day cycles.";
   };
