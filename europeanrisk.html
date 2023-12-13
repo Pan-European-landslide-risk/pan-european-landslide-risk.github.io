@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>European Landslide Risk</title>
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" ></style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.27/"></script>
+    <script type = "text/javascript" src="./src/scripts.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+
+        <div class="rightitem">
+              <div class="tab">
+                <button id="Susceptibility" class="tablinks" onclick="loadhaz()">Susceptibility</button>
+                <button class="tablinks" onclick="loadloss()">Risk- Expected Loss</button>
+                <button class="tablinks" onclick="loadrisk()">Risk- Hotspots</button>
+                <button class="tablinks" onclick="loadriskday()">Population Risk- Daytime</button>
+                <button class="tablinks" onclick="loadrisknight()">Population Risk- Nighttime</button>
+                <button class="tablinks" onclick="loadriskdifference()">Population Risk- Difference</button>
+              </div>
+        </div>
+        
+        <div sytle="z-index:-1;">
+                <div id="viewDiv"></div>
+        </div>
+        <div class="textbox" id="detailtext">
+          Please select susceptibility or one of the risk maps to visualize european landslide susceptibility and risk.
+        </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+    var buttons = $(".tablinks").on("click", function () {
+        $(this).addClass("focus").siblings().removeClass("focus")
+
+    });
+});
+  </script>
+</html>
