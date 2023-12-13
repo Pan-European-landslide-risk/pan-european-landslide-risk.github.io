@@ -136,7 +136,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk";
+      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay";
@@ -158,7 +158,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=true;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk";
+      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay";
@@ -180,7 +180,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk";
+      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=true;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay";
@@ -201,7 +201,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk";
+      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay";
@@ -222,7 +222,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk";
+      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay";
@@ -243,7 +243,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk";
+      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay";
