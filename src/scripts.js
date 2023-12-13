@@ -48,7 +48,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     const risklayer = new FeatureLayer({
       url: "https://services6.arcgis.com/rbb2iNgQKjXE64T8/arcgis/rest/services/Landslide_risk_hotspots/FeatureServer",
       visible: false,
-      title:"Risk"
+      title:"Risk (Susceptibility vs Human settlementes exposure)"
     });
   
     view.map.add(risklayer);
