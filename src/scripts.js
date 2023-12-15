@@ -25,7 +25,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     
     const exposure = {
       "title": "Landslide Risk- Expected Losses",
-      "content": "<b>Mountain domain:</b> {Zone}<br><b>Area Slopeunit:</b> {Area_SU}<br><b>Susceptibility:</b> {susc_unb}<br><b>Human settlementes exposure (€):</b> {Bui_exp}<br><b>Agricultural areas exposure (€):</b> {Lu_exp}<br><b>Total risk - expected economic losses (€):</b> {Risk_tot}<br><b>Total risk per square meter (€/square meter):</b> {Rtot_sqm}"
+      "content": "<b>Mountain domain:</b> {Zone}<br><b>Area Slopeunit:</b> {Area_SU}<br><b>Susceptibility:</b> {susc_unb}<br><b>Human settlements exposure (€):</b> {Bui_exp}<br><b>Agricultural areas exposure (€):</b> {Lu_exp}<br><b>Total risk - expected economic losses (€):</b> {Risk_tot}<br><b>Total risk per square meter (€/square meter):</b> {Rtot_sqm}"
     }
     const hazardlayer = new FeatureLayer({
       url: "https://services6.arcgis.com/rbb2iNgQKjXE64T8/arcgis/rest/services/Landslide_susceptibility/FeatureServer",
@@ -48,7 +48,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
     const risklayer = new FeatureLayer({
       url: "https://services6.arcgis.com/rbb2iNgQKjXE64T8/arcgis/rest/services/Landslide_risk_hotspots/FeatureServer",
       visible: false,
-      title:"Risk (Susceptibility vs Human settlementes exposure)"
+      title:"Risk (Susceptibility vs Human settlements exposure)"
     });
   
     view.map.add(risklayer);
@@ -136,7 +136,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
+      return layer.title === "Risk (Susceptibility vs Human settlements exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
@@ -158,7 +158,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=true;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
+      return layer.title === "Risk (Susceptibility vs Human settlements exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
@@ -180,7 +180,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
+      return layer.title === "Risk (Susceptibility vs Human settlements exposure)";
       }).visible=true;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
@@ -201,7 +201,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
+      return layer.title === "Risk (Susceptibility vs Human settlements exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
@@ -222,7 +222,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
+      return layer.title === "Risk (Susceptibility vs Human settlements exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
@@ -243,7 +243,7 @@ require(["esri/Map", "esri/views/SceneView","esri/layers/FeatureLayer",
         return layer.title === "Loss";
         }).visible=false;
     view.map.allLayers.find(function(layer) {
-      return layer.title === "Risk (Susceptibility vs Human settlementes exposure)";
+      return layer.title === "Risk (Susceptibility vs Human settlements exposure)";
       }).visible=false;
     view.map.allLayers.find(function(layer) {
         return layer.title === "RiskDay (Susceptibility vs Yearly Population Daytime)";
