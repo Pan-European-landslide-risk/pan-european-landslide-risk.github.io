@@ -92,7 +92,7 @@ save(auc_domain2,file='data_output/cross_validation/Domain_oriented_CV/auc_domai
 save(auc_domain2.b,file='data_output/cross_validation/Domain_oriented_CV/auc_domainBIAS.Rda')
 
 #######  SCV #######
-partition=partition_cv(data=data_val,coords=c("x","y"),nfold=10,repetition =10)
+partition=partition_kmeans(data=data_val,coords=c("x","y"),nfold=10,repetition =10)
 save(partition,file='data_output/cross_validation/SCV/partition_sperro.Rda')
 auc_scv=rep(NA,100)
 auc_scv.b=rep(NA,100)
